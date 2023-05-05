@@ -1,5 +1,6 @@
 import React from 'react';
-import Register  from './Register';
+import Login from './Login';
+import ContactForm from './Contact';
 
 import {Link} from 'react-router-dom'
 import Logo from '../assests/logo.png'
@@ -16,7 +17,8 @@ const Header = () => {
           <Link  className='hover:text-violet-900 transition' to=''>Products</Link>
 
           <Link className='hover:text-violet-900 transition' to=''>Manual</Link>
-          <Link className='hover:text-violet-900 transition' to='./Register'>Register/Login</Link>
+          <Link className='hover:text-violet-900 transition' to='./Login'>Register/Login</Link>
+          <Link className='hover:text-violet-900 transition' to=''>Contact</Link>
           <Link className='hover:text-violet-900 transition' to=''><BsFillCartCheckFill/></Link>
       
           {/* <Link className='hover:text-violet-900 transition' to='./Login'>Login</Link> */}

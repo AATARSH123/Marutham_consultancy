@@ -6,8 +6,8 @@ import Footer from './components/Footer'
 import Product from './components/Products'
 // import ProductList from './components/ProductList'
  import Rating from './components/Rating';
- import { Register } from './components/Register';
- import { Login } from './components/Login';
+import Register from './components/Register';
+ import Login from './components/Login';
 
 //import Footer from './components/Footer'
 
