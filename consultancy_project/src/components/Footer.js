@@ -13,18 +13,18 @@ export default function Footer() {
                 <span className=" text-2xl font-semibold  dark:text-white">Marutham Bio-Ages</span>
             
             <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
+                {/* <li>
                     <a href="#" className="mr-4 hover:underline md:mr-6 ">Product</a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <a href="#" className="mr-4 hover:underline md:mr-6">About Us</a>
-                </li>
+                </li> */}
                 <li>
-                    <a href="#" className="mr-4 hover:underline md:mr-6 ">Login/Sign</a>
+                    <a href="#" className="mr-4 hover:underline md:mr-6 ">↑</a>
                 </li>
-                <li>
+                {/* <li>
                     <a href="#" className="mr-4 hover:underline md:mr-6 ">Cart</a>
-                </li>
+                </li> */}
                
             </ul>
         </div>

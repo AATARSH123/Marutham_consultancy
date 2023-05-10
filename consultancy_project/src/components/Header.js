@@ -14,11 +14,11 @@ const Header = () => {
         </Link> 
         <div className='flex items-center gap-6'>
 
-          <Link  className='hover:text-violet-900 transition' to=''>Products</Link>
+          <Link  className='hover:text-violet-900 transition' to=''>Home</Link>
 
           <Link className='hover:text-violet-900 transition' to=''>Manual</Link>
           <Link className='hover:text-violet-900 transition' to='./Login'>Register/Login</Link>
-          <Link className='hover:text-violet-900 transition' to=''>Contact</Link>
+          <Link className='hover:text-violet-900 transition' to='/contact'>Contact</Link>
           <Link className='hover:text-violet-900 transition' to=''><BsFillCartCheckFill/></Link>
       
           {/* <Link className='hover:text-violet-900 transition' to='./Login'>Login</Link> */}

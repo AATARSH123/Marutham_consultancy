@@ -14,8 +14,8 @@ function Home()  {
     <About/>
     {/* <Rating/> */}
     <Product/>
-    <ContactForm/>
-    <Admin/>
+    {/* <ContactForm/>
+    <Admin/> */}
     {/* <ShoppingCart/> */}
     
   </div>);

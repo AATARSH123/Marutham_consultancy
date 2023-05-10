@@ -98,35 +98,17 @@ class ContactForm extends Component {
 
               <ul className="info-details">
                 <li>
-                  <i className="fas fa-phone-alt"></i>
+                  {/* <i className="fas fa-phone-alt"></i> */}
                   <span>Phone:</span> <a href="tel:+123456789">+91 123456789</a>
                 </li>
                 <li>
-                  <i className="fas fa-paper-plane"></i>
+                  {/* <i className="fas fa-paper-plane"></i> */}
                   <span>Email:</span>{" "}
                   <a href="mailto:offerz@gmail.com">offerz@gmail.com</a>
                 </li>
                 <li>
-                  <i className="fas fa-globe"></i>
+                  {/* <i className="fas fa-globe"></i> */}
                   <span>Website:</span> <a href="/">offerz.com</a>
-                </li>
-              </ul>
-
-              <ul className="social-icons">
-                <li>
-                  <a href="https://www.facebook.com">
-                    <i className="fab fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
                 </li>
               </ul>
             </div>
@@ -145,17 +127,7 @@ class ContactForm extends Component {
                     ></input>
                     <span></span>
                   </div>
-                  <div className="form-group">
-                    <input
-                      name="lname"
-                      type="text"
-                      className="lname"
-                      value={this.state.lname}
-                      onChange={this.handlelname}
-                      placeholder="Last Name"
-                    ></input>
-                    <span></span>
-                  </div>
+                  
                   <div className="form-group">
                     <input
                       type="email"

@@ -5,12 +5,14 @@ function Admin() {
   const [image, setImage] = useState("");
   const [allImage, setAllImage] = useState([]);
   const [name, setname] = useState("");
-  const [address, setaddress] = useState("");
-  const [oldprice, setoldprice] = useState("");
-  const [newprice, setnewprice] = useState("");
-  const [discount, setdiscount] = useState("");
-  const [productType, setproductType] = useState("");
-  const [productFilter, setproductFilter] = useState("");
+  const [cost, setcost] = useState("");
+  const [dose, setdose] = useState("");
+  const [usage, setusage] = useState("");
+  const [quantityType, setquantityType] = useState("");
+  const [shortDescription, setshortDescription] = useState("");
+  const [description, setdescription] = useState("");
+  const [packSize, setpackSize] = useState("");
+  const [packType, setpackType] = useState("");
   function convertToBase64(e) {
     console.log(e);
     var reader = new FileReader();
@@ -23,27 +25,10 @@ function Admin() {
       console.log("Error: ", error);
     };
   }
-  const options = [
-    {
-      label: "Select",
-      value: "",
-    },
-    {
-      label: "Books",
-      value: "books",
-    },
 
-    {
-      label: "Software",
-      value: "Software",
-    },
-  ];
-  useEffect(() => {
-    getImage();
-  }, [image]);
-
-  function uploadImage() {
-    fetch("http://localhost:8080/api/fetch/upload-image", {
+ async function uploadImage() {
+   try{
+   const res = await fetch("http://localhost:7000/api/v1/products",{
       method: "POST",
       crossDomain: true,
       headers: {
@@ -52,36 +37,24 @@ function Admin() {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        base64: image,
-        name,
-        address,
-        oldprice,
-        newprice,
-        discount,
-        productType,
+        image,
+        name,cost,quantityType,shortDescription,description,packSize,packType,usage,dose
       }),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
-      window.location.replace("http://localhost:3000/products")
 
+      console.log("res",res);
+      // window.location.replace("http://localhost:3000/products")
   }
-
-  function getImage() {
-    fetch("http://localhost:8080/api/fetch/get-image", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setAllImage(data.data);
-      });
+  catch(err){
+    console.log("error",err);
   }
-
+  }
   return (
     <div className="product-wrapper">
       <div class="productCard">
-        <label>Shop Name : </label>
+        <label>Name : </label>
         <input
           type="text"
           value={name}
@@ -89,39 +62,60 @@ function Admin() {
           onChange={(e) => setname(e.target.value)}
         ></input>
         <br></br>
-        <label>Address : </label>
-        <input
-          type="text"
-          value={address}
-          onChange={(e) => setaddress(e.target.value)}
-        ></input>
-        <br></br>
-        <label>Old Price : </label>
+        <label>Cost : </label>
         <input
           type="number"
-          value={oldprice}
-          onChange={(e) => setoldprice(e.target.value)}
+          value={cost}
+          onChange={(e) => setcost(e.target.value)}
         ></input>
         <br></br>
-        <label>New Price : </label>
-        <input
-          type="number"
-          value={newprice}
-          onChange={(e) => setnewprice(e.target.value)}
-        ></input>
-        <br></br>
-        <label>Discount : </label>
+        <label>Quantity type: </label>
         <input
           type="text"
-          value={discount}
-          onChange={(e) => setdiscount(e.target.value)}
+          value={quantityType}
+          onChange={(e) => setquantityType(e.target.value)}
         ></input>
         <br></br>
-        <label>Product type:</label>
+        <label>Short Description : </label>
         <input
           type="text"
-          value={productType}
-          onChange={(e) => setproductType(e.target.value)}
+          value={shortDescription}
+          onChange={(e) => setshortDescription(e.target.value)}
+        ></input>
+        <br></br>
+        <label>Description : </label>
+        <input
+          type="text"
+          value={description}
+          onChange={(e) => setdescription(e.target.value)}
+        ></input>
+        <br></br>
+        <label>Pack Size:</label>
+        <input
+          type="text"
+          value={packSize}
+          onChange={(e) => setpackSize(e.target.value)}
+        ></input>
+        <br></br>
+        <label>packType:</label>
+        <input
+          type="text"
+          value={packType}
+          onChange={(e) => setpackType(e.target.value)}
+        ></input>
+        <br></br>
+        <label>usage:</label>
+        <input
+          type="text"
+          value={usage}
+          onChange={(e) => setusage(e.target.value)}
+        ></input>
+        <br></br>
+        <label> dose:</label>
+        <input
+          type="text"
+          value={ dose}
+          onChange={(e) => setdose(e.target.value)}
         ></input>
         <br></br>
         Let's Upload Image
@@ -137,33 +131,6 @@ function Admin() {
         <button onClick={uploadImage} id="file">
           Submit
         </button>
-        <select
-          name="select"
-          value={productFilter}
-          onChange={(e) => {
-            setproductFilter(e.target.value);
-            console.log(e.target.value);
-          }}
-        >
-          {options.map((option) => (
-            <option value={option.value}>{option.label}</option>
-          ))}
-        </select>
-      </div>
-      
-      <div className="products">
-        {allImage.map((data) => {
-          if (data.productType == productFilter) {
-            return (
-              <div className="showProducts">
-                <img width={100} height={100} src={data.image} />
-                <p>{data.productType}</p>
-                <p>{data.address}</p>
-                <p>{data.name}</p>
-              </div>
-            );
-          }
-        })}
       </div>
     </div>
   );

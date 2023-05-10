@@ -43,7 +43,7 @@ const productSchema = new mongoose.Schema({
       },
       image: {
         type: String,
-        required: [true, 'A product must have a image'],
+        // required: [true, 'A product must have a image'],
       }
 },{
     toJSON: { virtuals: true },

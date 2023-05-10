@@ -8,7 +8,8 @@ import Product from './components/Products'
  import Rating from './components/Rating';
 import Register from './components/Register';
  import Login from './components/Login';
-
+import ContactForm from './components/Contact';
+import Admin from './components/Admin';
 //import Footer from './components/Footer'
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/register' element={<Register/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
+      <Route path ='/adminadd' element={<Admin/>}></Route>
+      <Route path='/contact' element={<ContactForm/>}></Route>
+      <Route path='/register' element={<Register/>}></Route>
 
     </Routes> 
     <Footer/>

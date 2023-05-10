@@ -18,7 +18,7 @@ a {
 
 .contactBody {
   background-color: #d78686;
-  height: 90vh;
+  height: 80vh;
 }
 .box-wrapper {
   position: relative;
@@ -113,6 +113,7 @@ a {
 .form-wrap {
   width: 65%;
   float: right;
+  height: 551px;
   padding: 40px 25px 35px 25px;
   border-radius: 0px 30px 30px 0px;
   background: #ecf0f3;
