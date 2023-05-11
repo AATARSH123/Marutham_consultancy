@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../assests/ratings.png'
-// import "./rating.css"
+import "./rating.css"
 export default function Rating() {
   return (
     <div>
