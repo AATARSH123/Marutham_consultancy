@@ -14,6 +14,7 @@ import ContactForm from './components/Contact';
 import Admin from './components/Admin';
 import Products from './components/Products';
 import Manual from './components/Manuals';
+import CartPopup from './components/Cart';
 //import Footer from './components/Footer'
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       <Route path ='/adminadd' element={<Admin/>}></Route>
       <Route path='/contact' element={<ContactForm/>}></Route>
       <Route path='/register' element={<Register/>}></Route>
+      <Route path='/cart' element={<CartPopup/>}></Route>
     <Route path='/Products' element={<Product/>}></Route>
     <Route path='/manual/:id' element={<Manual/>}></Route>
     </Routes> 
