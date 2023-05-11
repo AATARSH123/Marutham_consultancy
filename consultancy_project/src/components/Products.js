@@ -83,7 +83,8 @@ if(loading)
                 {/* <img src={product.image} />
                 <li key={product.name}>{product.name + product.cost}</li> */}
                 <Link to={`/manual/${product._id}`} >
-                <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition ' >
+                 
+                <div className=' border bg-white shadow-1 p-5  w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition ' >
       <img className='mb-8'src={product.image} alt='' style={{width:"fit-content"}}></img>
         <div className='mb-4 flex-gap-x-2 text-sm'>
         <div>{product.name}</div>
@@ -106,7 +107,7 @@ if(loading)
           <div>{product.shortDescription}</div>
         </div>
       
-      </div>
+      </div> 
       </Link>
                 </>
               ))}

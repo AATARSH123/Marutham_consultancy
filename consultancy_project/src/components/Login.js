@@ -129,7 +129,7 @@ const Login = () => {
                             <Button variant="primary" className='text-center col-lg-6' onClick={addData} style={{ background: "rgb(67, 185, 127)" }} type="submit">
                                Submit
                             </Button>
-                            <br></br><p className='mt-3'>Don' have a account <br></br><span style={{color:"red"}}><Link className='hover:text-violet-900 transition' to='/register'>SignUp </Link></span> </p>
+                            <br></br><p className='mt-3'>Don't have a account <br></br><span style={{color:"red"}}><Link className='hover:text-violet-900 transition' to='/register'>SignUp </Link></span> </p>
                             </div>
                         </Form>
                     </div>

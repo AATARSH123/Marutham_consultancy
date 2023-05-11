@@ -50,7 +50,7 @@ export default function Rating() {
     <span class="text-sm font-medium text-blue-600 dark:text-blue-500">1%</span>
 </div>    */}
  <div className='photos'>
-          <img src={image} alt=''/>
+          <img  style={{marginLeft:"15%"}}src={image} alt=''/>
         </div>
       
     </div>
