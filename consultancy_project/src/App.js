@@ -1,4 +1,6 @@
 import React from 'react';
+import './App.css'
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header'
 import Home from './components/Home';
@@ -10,6 +12,8 @@ import Register from './components/Register';
  import Login from './components/Login';
 import ContactForm from './components/Contact';
 import Admin from './components/Admin';
+import Products from './components/Products';
+import Manual from './components/Manuals';
 //import Footer from './components/Footer'
 
 const App = () => {
@@ -26,7 +30,8 @@ const App = () => {
       <Route path ='/adminadd' element={<Admin/>}></Route>
       <Route path='/contact' element={<ContactForm/>}></Route>
       <Route path='/register' element={<Register/>}></Route>
-
+    <Route path='/Products' element={<Product/>}></Route>
+    <Route path='/manual/:id' element={<Manual/>}></Route>
     </Routes> 
     <Footer/>
   </div>

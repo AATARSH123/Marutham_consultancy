@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Login';
 import ContactForm from './Contact';
-
+import Products from './Products';
 import {Link} from 'react-router-dom'
 import Logo from '../assests/logo.png'
 import {BsFillCartCheckFill} from 'react-icons/bs'
@@ -16,7 +16,8 @@ const Header = () => {
 
           <Link  className='hover:text-violet-900 transition' to=''>Home</Link>
 
-          <Link className='hover:text-violet-900 transition' to=''>Manual</Link>
+          {/* <Link className='hover:text-violet-900 transition' to=''>Manual</Link> */}
+          <Link className='hover:text-violet-900 transition' to='/Products'>Products</Link>
           <Link className='hover:text-violet-900 transition' to='./Login'>Register/Login</Link>
           <Link className='hover:text-violet-900 transition' to='/contact'>Contact</Link>
           <Link className='hover:text-violet-900 transition' to=''><BsFillCartCheckFill/></Link>

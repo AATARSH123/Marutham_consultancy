@@ -37,6 +37,7 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import {ImPriceTag} from 'react-icons/im'
 import {FcAbout} from 'react-icons/fc'
+import { Link } from "react-router-dom"
 const Products = () => {
   
   const [product, setproduct] = useState([]);
@@ -75,38 +76,41 @@ if(loading)
       <h2 className="text-3xl font-bold mb-4 text-center">Products</h2>
       
       {product.length > 0 && (
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3, 1fr)" }} >
-          {product.map(product => (
-            <>
-            {/* <img src={product.image} />
-            <li key={product.name}>{product.name + product.cost}</li> */}
-            <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition ' >
-   <img className='mb-8'src={product.image} alt=''></img>
-    <div className='mb-4 flex-gap-x-2 text-sm'>
-     <div>{product.name}</div>
-      
+        
+              <div style={{display:"grid",gridTemplateColumns:"repeat(3, 1fr)" }} >
+              {product.map(product => (
+                <>
+                {/* <img src={product.image} />
+                <li key={product.name}>{product.name + product.cost}</li> */}
+                <Link to={`/manual/${product._id}`} >
+                <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition ' >
+      <img className='mb-8'src={product.image} alt='' style={{width:"fit-content"}}></img>
+        <div className='mb-4 flex-gap-x-2 text-sm'>
+        <div>{product.name}</div>
+          
 
-   </div>
-   
-  <div className='flex gap-x-4 my-4'>
-         </div>
-     <div className='flex items-center gap-1'>
-       <div>
-       <ImPriceTag/>
       </div>
-       <div>{product.cost}</div>
-     </div>
-     <div className='flex items-center gap-1'>
-       <div>
-       <FcAbout/>
-       </div>
-       <div>{product.shortDescription}</div>
-     </div>
-   
-   </div>
-            </>
-          ))}
+      
+      <div className='flex gap-x-4 my-4'>
+            </div>
+        <div className='flex items-center gap-1'>
+          <div>
+          <ImPriceTag/>
+          </div>
+          <div>{product.cost}</div>
         </div>
+        <div className='flex items-center gap-1'>
+          <div>
+          <FcAbout/>
+          </div>
+          <div>{product.shortDescription}</div>
+        </div>
+      
+      </div>
+      </Link>
+                </>
+              ))}
+            </div>
       )}
     </div>
   );
