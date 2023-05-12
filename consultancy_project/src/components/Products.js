@@ -69,7 +69,6 @@ const Products = () => {
     <div>
       <h2 className="text-3xl font-bold mb-4 text-center">Products</h2>
       {product.length > 0 && (
-<<<<<<< HEAD
         <div style={{display:"grid",gridTemplateColumns:"repeat(3, 1fr)"}}>
           {product.map(product => (
             <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition' key={product._id}>
@@ -97,37 +96,9 @@ const Products = () => {
                   <MDBBtn className='me-1' onClick={() => handleAddToCart(product)}>Add to cart</MDBBtn>
                 </div>
               </div>
-=======
-        
-              <div style={{display:"grid",gridTemplateColumns:"repeat(3, 1fr)" }} >
-              {product.map(product => (
-                <>
-                {/* <img src={product.image} />
-                <li key={product.name}>{product.name + product.cost}</li> */}
-                <Link to={`/manual/${product._id}`} >
-                 
-                <div className=' border bg-white shadow-1 p-5  w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition ' >
-      <img className='mb-8'src={product.image} alt='' style={{width:"fit-content"}}></img>
-        <div className='mb-4 flex-gap-x-2 text-sm'>
-        <div>{product.name}</div>
-          
-
-      </div>
-      
-      <div className='flex gap-x-4 my-4'>
->>>>>>> 50f50da507056351d4a984e1b712c0fd88b38f6e
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-      
-      </div> 
-      </Link>
-                </>
-              ))}
-            </div>
->>>>>>> 50f50da507056351d4a984e1b712c0fd88b38f6e
       )}
       <div style={{ textAlign: "center" }}>
        <Link to="/cart">

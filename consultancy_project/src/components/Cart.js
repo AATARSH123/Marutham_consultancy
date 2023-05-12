@@ -4,7 +4,7 @@ import { MdClose } from 'react-icons/md';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
 function CartPopup(props) {
-  const { cartItems, onRemove, onClear } = props;
+  const { cartItems} = props;
 //   console.log(cartItems)
 const items1 = localStorage.getItem('cartItems');
 console.log(items1)
@@ -16,12 +16,12 @@ console.log(items1["name"])
       
       <h2>Cart Items</h2>
       
-      {cartItems && cartItems.length > 0 ? (
+      {cartItems ? (
         cartItems.map((item) => (
           <div key={item._id}>
             <p>{item.name}</p>
             <p>Quantity: {item.quantity}</p>
-            <button onClick={() => onRemove(item)}>Remove</button>
+            {/* <button onClick={() => onRemove(item)}>Remove</button> */}
           </div>
         ))
       ) : (
@@ -30,7 +30,7 @@ console.log(items1["name"])
       <Link to="/checkout">
         <button>Checkout</button>
       </Link>
-      <button onClick={onClear}>Clear Cart</button>
+      {/* <button onClick={onClear}>Clear Cart</button> */}
     </div>
   );
 }

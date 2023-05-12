@@ -104,7 +104,7 @@ class ContactForm extends Component {
                 <li>
                   {/* <i className="fas fa-paper-plane"></i> */}
                   <span>Email:</span>{" "}
-                  <a href="mailto:maruthambioages@gmail.com">offerz@gmail.com</a>
+                  <a href="mailto:maruthambioages@gmail.com">bioages@gmail.com</a>
                 </li>
                 <li>
                   {/* <i className="fas fa-globe"></i> */}
