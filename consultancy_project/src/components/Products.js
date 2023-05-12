@@ -3,6 +3,7 @@ import { ImPriceTag } from "react-icons/im";
 import { FcAbout } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { MDBBtn } from "mdb-react-ui-kit";
+import {BsFillCartCheckFill} from 'react-icons/bs'
 // import CartPopup from "./CartPopup";
 
 const Products = () => {
@@ -145,11 +146,11 @@ const Products = () => {
         <div className="fixed bottom-5 right-5 bg-blue-500 p-3 rounded-full text-white cursor-pointer">
           <span className="text-xl">{cartItems.length}</span>
           <MDBBtn className="me-1" onClick={handleOpen}>
-            View Cart
+          <BsFillCartCheckFill/>
           </MDBBtn>
         </div>
         {isOpen && (
-          <div className="fixed bottom-20 right-5 p-3 bg-white border border-gray-300 shadow-lg rounded-md max-h-80 overflow-y-auto">
+          <div className="fixed bottom-20 right-5 p-3 bg-white border border-gray-300 shadow-lg rounded-md max-h-800 overflow-y-auto">
             <h2 className="text-2xl font-bold mb-4">Cart Items</h2>
             <ul>
               {cartItems.map((item) => (
